@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff; /* Couleur de fond claire */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+    color: #0066ff;
+}
+
+h3 {
+    margin-left: 40%;
+}
+
+h2 {
+    color: #0066ff; /* Couleur bleue pour les titres */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.joueur-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #0066ff; /* Bordure bleue */
+    border-radius: 4px;
+}
+
+.submit-btn {
+    width: 83%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #0066ff; /* Couleur de fond bleue pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+}
+
+
+.loader {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

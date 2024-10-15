@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Kolon-tsaina Game</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="/scripts/question.js" defer></script>
+    <script src="/scripts/question2.js" defer></script>
+    <script src="/scripts/kolo.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- bouton start -->
+
+    <div class="main">
+        <button class="start-button">COMMENCER</button>
+    </div>
+
+
+    <!-- popup info -->
+
+    <div class="popup-info">
+        <div class="popup-title">
+            <h1>GUIDE DE DEMARRAGE</h1>
+        </div>
+        <div class="popup-list">
+            <p>1. Le joueur doit répondre à toutes les questions pour terminer le quiz.</p>
+            <p>2. Chaque question a une seule réponse correcte parmi les options proposées.</p>
+            <p>3. Le joueur dispose d'un temps limité pour répondre à chaque question.</p>
+            <p>4. Si le temps est écoulé, la réponse sera considérée comme incorrecte.</p>
+            <p>5. Les scores seront affichés à la fin du quiz pour évaluer la performance.</p>
+        </div>        
+        <div class="popup-bouton">
+            <button class="quitter" >Quitter</button>
+            <button class="commencer" >Commencer</button>
+        </div>
+    </div>
+
+    <!-- quiz-game -->
+    <div class="container">
+        <div class="quiz-game">
+            <div class="header-quiz">
+                <div class="quiz-title">
+                    Plateforme Kolon-tsaina Game
+                </div>
+                <div class="quiz-chrono">
+                    <p>TEMPS <i class='bx bx-time'></i></p>
+                    <span>15</span>
+                </div>
+                <div class="quiz-line"></div>
+            </div>
+            <div class="quiz-categorie"></div>
+            <div class="question-quiz">
+                <!-- <span>Comment s'appelle la capitale de FRANCE</span> -->
+            </div>
+            <div class="list-quiz">
+                <!-- <div class="option"><span>PARIS</span></div>
+                <div class="option"><span>RWANDA</span></div>
+                <div class="option">GABON</div>
+                <div class="option">MADAGASCAR</div> -->
+            </div>
+            <div class="footer-quiz">
+                <div class="quiz-count">
+                    <span>1</span> sur <span>5</span> Quiz
+                </div>
+                <button class="next-bouton">Next question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- score affichage -->
+
+    <div class="score-affichage">
+        <div class="icon-affichage"><i class='bx bxs-crown'></i></div>
+        <div class="text-score">
+            <!-- <p><span>Félicitations ! </span> votre score est <span>2</span> sur <span>5 👍</span></p> -->
+        </div>
+        <div class="btn-score">
+            <button class="btn-suivant">SUIVANT</button>
+            <button class="btn-quitte">QUITTER</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="devine-quiz">
+            <div class="devine-title">
+                Devinez l'image
+            </div>
+            <div class="img-devine">
+                <div class="carre">
+                    <img src="lemurien.jpg" id="image" alt="">
+                </div>
+                <div class="indice">
+                    Indice : <span>white</span>
+                </div>
+            </div>
+            <div class="form-devine">
+                <input type="text" id="answer" placeholder="Taper ici votre réponse ...">
+                <button class="btn-valide">Valider</button>
+            </div>
+            <div class="feedblack-devine"></div>
+            <div class="score-devine">Score : <span class="score">0</span> sur <span class="lenght">5</span></div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
