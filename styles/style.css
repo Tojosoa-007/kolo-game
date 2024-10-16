@@ -139,6 +139,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    box-shadow: 0px 2px 5px var(--gray-color);
     transform: translate(-50%, -50%);
     width: 800px;
     background-color: var(--white-color);
