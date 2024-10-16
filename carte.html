@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux de Carte Madagascar</title>
+    <link rel="stylesheet" href="styles/carte.css">
+    <script src="scripts/carte.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Liste des éléments à drag -->
+    <div class="liste-drag">
+        <div class="drag" draggable="true">Toliara</div>
+        <div class="drag" draggable="true">Mahajanga</div>
+        <div class="drag" draggable="true">Fianarantsoa</div>
+        <div class="drag" draggable="true">Antsiranana</div>
+        <div class="drag" draggable="true">Toamasina</div>
+        <div class="drag" draggable="true">Antananarivo</div>
+    </div>
+
+    <div class="image-carte">
+        <img src="images/carte.webp" alt="carte de madagascar">
+    </div>
+
+
+    <!-- Cages vides sur la carte -->
+    <div class="liste-drop">
+        <div class="vide" data-answer="Toliara"></div>
+        <div class="vide" data-answer="Mahajanga"></div>
+        <div class="vide" data-answer="Fianarantsoa"></div>
+        <div class="vide" data-answer="Antsiranana"></div>
+        <div class="vide" data-answer="Toamasina"></div>
+        <div class="vide" data-answer="Antananarivo"></div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6f7ff;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+}
+
+.image-carte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.image-carte img {
+    width: 89%;
+    height: auto;
+}
+
+.liste-drag {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.drag {
+    background-color: #f39c12;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.drag:hover {
+    border-color: #e67e22;
+}
+
+.liste-drop .vide {
+    position: absolute;
+    background-color: white;
+    border: 2px solid #0066ff;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+/* Position des cages sur la carte (approximatif, ajustez selon votre image) */
+.vide:nth-child(1) { top: 730px; left: 50px; } /* Toliara */
+.vide:nth-child(2) { top: 290px; left: 150px; } /* Mahajanga */
+.vide:nth-child(3) { top: 600px; left: 160px; } /* Fianarantsoa */
+.vide:nth-child(4) { top: 60px; left: 350px; }  /* Antsiranana */
+.vide:nth-child(5) { top: 400px; left: 320px; } /* Toamasina */
+.vide:nth-child(6) { top: 410px; left: 180px; } /* Antananarivo */

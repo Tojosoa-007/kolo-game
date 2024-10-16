@@ -56,26 +56,13 @@ boutonCommencer.addEventListener("click", () => {
     container.style.display = "block"
     popupInfo.classList.remove("active")
     startBouton.style.display = "none"
-    categorie.innerText = "GASTRONOMIE"
-    categorie.style.backgroundColor = "#ffbf80"
-    container.style.backgroundColor = "#fff6ed"
     for (let o of option)
         console.log(o)
-    showQuestion(0, 'gast')
+    showQuestion(0)
     updateBottom(1)
     startTime(timeDelay)
     startTimeLine(widthTime)
 })
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -86,21 +73,13 @@ next_btn.addEventListener("click", () => {
     if (question_count < questions.length - 1) {
         question_count++
         question_number++
-        showQuestion(question_count, "gast")
+        showQuestion(question_count)
         updateBottom(question_number)
         clearInterval(counter)
         startTime(timeDelay)
         clearInterval(counterLine)
         startTimeLine(widthTime)
-        next_btn.style.display = "none"  // ici à refaire
-        if (question_count === 10) {
-            container.style.display = "none"
-            popupInfo.classList.remove("active")
-            startBouton.style.display = "none"
-            scoreAffichage.style.display = "block"
-            affichageScore(score)
-        }
-        
+        next_btn.style.display = "none"       
     } else {
         container.style.display = "none"
         popupInfo.classList.remove("active")
@@ -109,18 +88,6 @@ next_btn.addEventListener("click", () => {
         affichageScore(score)
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

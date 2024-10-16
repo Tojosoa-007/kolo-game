@@ -20,7 +20,6 @@
 
 body {
     height: 100vh; /* Assurez-vous que le corps prend toute la hauteur de la fenêtre */
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e6f7ff;
@@ -129,7 +128,7 @@ body {
 }
 
 .container {
-    background-color: var(--primary-color);
+    background-color: #e6f7ff;
     width: 100%;
     height: 100vh;
     display: none;
@@ -226,12 +225,6 @@ body {
 }
 
 
-
-
-
-
-
-
 .quiz-game .list-quiz .option {
     padding: 20px;
     background: var(--primary-color);
@@ -262,15 +255,6 @@ body {
 .quiz-game .list-quiz .option:hover {
     background-color: var(--hover-color);
 }
-
-
-
-
-
-
-
-
-
 
 .quiz-game .list-quiz .option.disabled {
     pointer-events: none;
