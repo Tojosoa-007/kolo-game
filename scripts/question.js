@@ -31,7 +31,7 @@ let questions = [
             "RIZ FRUIT"
         ],
         reponse: "RIZ VARY"
-    },
+    }
     // {
     //     numb: 4,
     //     question: "Quel est l'animal emblématique de MADAGASCAR ?",
