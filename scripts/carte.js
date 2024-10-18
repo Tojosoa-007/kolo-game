@@ -52,7 +52,7 @@ droppables.forEach(drop => {
                     if (c === 0) {
                         clearInterval(r)
                         alert("c'est fini ouraaaaahhh")
-                        body.innerText = "C'est fini"
+                        body.innerText = "C'est fini"  // TO DO
                     }
                 }, 1000)   
             } 
@@ -66,8 +66,8 @@ function startTimeLine (time) {
         time += 1
         counter.style.width = time + "px"
         if (time > 1200) {
-            clearInterval(counterLine)
-            alert("c'est fini ouraaaaahhh")
+            clearInterval(counterLine)// TO DO
+            alert("c'est fini ouraaaaahhh")// TO DO
         }
     }
 }
