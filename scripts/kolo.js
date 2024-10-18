@@ -22,7 +22,6 @@ const feedback = document.querySelector(".feedblack-devine")
 const indice = document.querySelector(".indice span")
 const categorie = document.querySelector(".quiz-categorie")
 const option = optionList.children
-console.log(option)
 
 
 
@@ -56,8 +55,6 @@ boutonCommencer.addEventListener("click", () => {
     container.style.display = "block"
     popupInfo.classList.remove("active")
     startBouton.style.display = "none"
-    for (let o of option)
-        console.log(o)
     showQuestion(0)
     updateBottom(1)
     startTime(timeDelay)
@@ -165,7 +162,16 @@ function submitFormulaire() {
                         clearInterval(a)
                         content.style.display = "none"
                         scoreAffichage.style.display = "block"
-                        affichageScore(scoreDevine)
+                        afficheScoreImage(scoreDevine)
+                        btnSuivant.onclick = () => {
+                            console.log("click sur le bouton suivant")
+                            content.style.display = "none"
+                            container.style.display = "none"
+                            popupInfo.classList.remove("active")
+                            startBouton.style.display = "none"
+                            window.location.href = "commence.html"                            
+                        }
+
                     }
                 }, 1000)
             }
@@ -189,15 +195,13 @@ function loadNextQuestion() {
 function afficheScoreImage (score) {
     let scoreParent = document.querySelector(".text-score")
     let scoreTag = ""
-    if (score < 5 ) {
+    if (score < 1 ) {
         scoreTag = "<p><span>" + "Vous avez perdu " + " </span> votre score est <span>" + score +"</span> sur <span>" + questionDevine.length + "😒</span></p>"
-    } else if (score >= 5 && score < 10) {
+    } else if (score >= 1 && score < 3) {
         scoreTag = "<p><span>" + "Vous avez fait un bon début ! " + " </span> votre score est <span>" + score +"</span> sur <span>" + questionDevine.length + "😊</span></p>"
-    } else if (score >= 10 && score < 15) {
+    } else if (score >= 3 && score < 4) {
         scoreTag = "<p><span>" + "Bien joué ! " + " </span> votre score est <span>" + score +"</span> sur <span>" + questionDevine.length + "😉</span></p>"
-    } else if (score >= 15 && score < 20) {
-        scoreTag = "<p><span>" + "Excellent ! " + " </span> votre score est <span>" + score +"</span> sur <span>" + questionDevine.length + "😮</span></p>"
-    } else if (score >= 20) {
+    } else if (score >= 4) {
         scoreTag = "<p><span>" + "Vous êtes un champion ! " + " </span> votre score est <span>" + score +"</span> sur <span>" + questionDevine.length + "🫡</span></p>"
     }
 
@@ -220,7 +224,6 @@ function showQuestion (index, className) {
                         '<div class="option"><span>' + questions[index].option[3] + '</span></div>';
         question.innerHTML = question_tag;
         optionList.innerHTML = option_tag;
-        console.log(option_tag)
     
         const opt = optionList.querySelectorAll(".option");
         for (let i = 0; i < option.length; i++) {
@@ -321,7 +324,7 @@ function startTime(time) {
 // fonction qui gère la time line
 
 function startTimeLine (time) {
-    counterLine = setInterval(timer, 20)
+    const counterLine = setInterval(timer, 20)
     function timer () {
         time += 1
         LineCounter.style.width = time + "px"
