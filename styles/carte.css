@@ -165,3 +165,98 @@ body {
     background-color: #0066ff;
     cursor: pointer;
 }
+
+
+.score-affichage {
+    position: absolute;
+    display: none; /* display */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 600px;
+    background-color: #0066ff;
+    border-radius: 6px;
+}
+
+.score-affichage .icon-affichage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 50px;
+}
+
+.score-affichage .icon-affichage i {
+    font-size: 7rem;
+    color: white;
+}
+
+.score-affichage .text-score {
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    width: 70%;
+    color: white;
+    margin-block: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+}
+
+.score-affichage .text-score span {
+    font-weight: 700;
+}
+
+.score-affichage .btn-score {
+    margin-left: 19%;
+    margin-bottom: 30px;
+}
+
+.score-affichage .btn-score button {
+    width: 190px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: #0066ff;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.score-affichage .btn-score button:hover {
+    opacity: .8;
+}
+
+.score-final {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: gray;
+    text-align: center;
+    padding-top: 7%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%) scale(.5);
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 2;
+    transition: all .5s ease-in-out;
+}
+
+.score-final.active {
+    opacity: 1;
+    z-index: 60;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.content {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #fff;
+    z-index: 50;
+    display: none;
+}

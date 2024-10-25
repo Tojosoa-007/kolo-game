@@ -1,11 +1,13 @@
+
 const draggables = document.querySelectorAll('.drag');
 const droppables = document.querySelectorAll('.vide');
 const placement = document.querySelector(".placement")
 const counter = document.querySelector(".counter")
 const body = document.querySelector("body")
 const btnCarteStart = document.querySelector(".btn-carte button")
+const scoreAffichage = document.querySelector(".score-affichage")
 
-let score = 0
+let scoreCarte = 0
 let remplie = false
 let number = 0
 let widthTime = 0
@@ -36,8 +38,8 @@ btnCarteStart.onclick = () => {
                 drop.style.color = '#fff'; // Green for correct
                 drop.style.border = '#2ecc71'; // Green for correct
                 drop.style.fontWeight = '700'; // Green for correct
-                score++
-                const afficheScore = '<div class="score">SCORE <span>' + score + '</span>sur<span>6</span></div>'
+                scoreCarte++
+                const afficheScore = '<div class="score">SCORE <span>' + scoreCarte + '</span>sur<span>6</span></div>'
                 placement.innerHTML = afficheScore
             } else {
                 drop.style.backgroundColor = '#e74c3c'; // Red for incorrect
@@ -53,8 +55,10 @@ btnCarteStart.onclick = () => {
                         c--
                         if (c === 0) {
                             clearInterval(r)
-                            alert("c'est fini ouraaaaahhh")
-                            body.innerText = "C'est fini"  // TO DO
+                            let scorefinal = document.querySelector(".score-final")  
+                            scorefinal.classList.add("active") 
+                            content.style.display = "block"  
+                            scorefinal.classList.add("active")      
                         }
                     }, 1000)   
                 } 
@@ -63,14 +67,18 @@ btnCarteStart.onclick = () => {
     });
 }
 
+
 function startTimeLine (time) {
     counterLine = setInterval(timer, 10)
     function timer () {
         time += 1
         counter.style.width = time + "px"
         if (time > 1200) {
-            clearInterval(counterLine)// TO DO
-            alert("c'est fini ouraaaaahhh")// TO DO
+            clearInterval(counterLine)
+            let scorefinal = document.querySelector(".score-final") 
+            let content = document.querySelector(".content") 
+            content.style.display = "block"  
+            scorefinal.classList.add("active") 
         }
     }
 }
