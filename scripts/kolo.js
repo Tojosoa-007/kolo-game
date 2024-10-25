@@ -169,7 +169,7 @@ function submitFormulaire() {
                             container.style.display = "none"
                             popupInfo.classList.remove("active")
                             startBouton.style.display = "none"
-                            window.location.href = "commence.html"                            
+                            window.location.href = "carte.html"                            
                         }
 
                     }
